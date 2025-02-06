@@ -36,35 +36,7 @@ import org.fossify.commons.models.RadioItem
 import org.fossify.commons.views.MyTextView
 import org.fossify.keyboard.R
 import org.fossify.keyboard.databases.ClipsDatabase
-import org.fossify.keyboard.helpers.Config
-import org.fossify.keyboard.helpers.INPUT_METHOD_SUBTYPE_VOICE
-import org.fossify.keyboard.helpers.LANGUAGE_ARABIC
-import org.fossify.keyboard.helpers.LANGUAGE_BELARUSIAN_CYRL
-import org.fossify.keyboard.helpers.LANGUAGE_BELARUSIAN_LATN
-import org.fossify.keyboard.helpers.LANGUAGE_BENGALI
-import org.fossify.keyboard.helpers.LANGUAGE_BULGARIAN
-import org.fossify.keyboard.helpers.LANGUAGE_CENTRAL_KURDISH
-import org.fossify.keyboard.helpers.LANGUAGE_CHUVASH
-import org.fossify.keyboard.helpers.LANGUAGE_DANISH
-import org.fossify.keyboard.helpers.LANGUAGE_ENGLISH_DVORAK
-import org.fossify.keyboard.helpers.LANGUAGE_ENGLISH_QWERTZ
-import org.fossify.keyboard.helpers.LANGUAGE_ESPERANTO
-import org.fossify.keyboard.helpers.LANGUAGE_FRENCH_AZERTY
-import org.fossify.keyboard.helpers.LANGUAGE_FRENCH_BEPO
-import org.fossify.keyboard.helpers.LANGUAGE_GERMAN
-import org.fossify.keyboard.helpers.LANGUAGE_GREEK
-import org.fossify.keyboard.helpers.LANGUAGE_HEBREW
-import org.fossify.keyboard.helpers.LANGUAGE_LITHUANIAN
-import org.fossify.keyboard.helpers.LANGUAGE_NORWEGIAN
-import org.fossify.keyboard.helpers.LANGUAGE_POLISH
-import org.fossify.keyboard.helpers.LANGUAGE_ROMANIAN
-import org.fossify.keyboard.helpers.LANGUAGE_RUSSIAN
-import org.fossify.keyboard.helpers.LANGUAGE_SLOVENIAN
-import org.fossify.keyboard.helpers.LANGUAGE_SPANISH
-import org.fossify.keyboard.helpers.LANGUAGE_SWEDISH
-import org.fossify.keyboard.helpers.LANGUAGE_TURKISH_Q
-import org.fossify.keyboard.helpers.LANGUAGE_UKRAINIAN
-import org.fossify.keyboard.helpers.LANGUAGE_VIETNAMESE_TELEX
+import org.fossify.keyboard.helpers.*
 import org.fossify.keyboard.interfaces.ClipsDao
 
 val Context.config: Config get() = Config.newInstance(applicationContext.safeStorageContext)
@@ -292,6 +264,7 @@ fun Context.getKeyboardLanguageText(language: Int): String {
         LANGUAGE_RUSSIAN -> getString(R.string.translation_russian)
         LANGUAGE_SLOVENIAN -> getString(R.string.translation_slovenian)
         LANGUAGE_SPANISH -> getString(R.string.translation_spanish)
+        LANGUAGE_SPANISH_ARAOZU -> "${getString(R.string.translation_spanish)} (ARAOZU)"
         LANGUAGE_SWEDISH -> getString(R.string.translation_swedish)
         LANGUAGE_TURKISH_Q -> "${getString(R.string.translation_turkish)} (Q)"
         LANGUAGE_UKRAINIAN -> getString(R.string.translation_ukrainian)
